@@ -45,8 +45,8 @@ export async function loader({request, context: {storefront}}: LoaderArgs) {
     descriptionHtml: 'Todos nuestros productos',
     description: 'Todos nuestros productos',
     seo: {
-      title: 'Nuestros productos',
-      description: 'Todos nuestros productos',
+      title: 'Tienda oficial de la lucha libre chilena',
+      description: 'Catalogo de productos de la lucha libre chilena',
     },
     metafields: [],
     products: data.products,
@@ -78,7 +78,6 @@ export default function AllProducts() {
     <>
       <PageHeader heading="Nuestros productos" variant="allCollections" />
       <Section>
-        <h1>SIEMPRE BUENA ONDA</h1>
         <Pagination connection={products}>
           {({
             endCursor,

@@ -228,7 +228,7 @@ function collection({
     description: truncate(
       collection?.seo?.description ?? collection?.description ?? '',
     ),
-    titleTemplate: '%s | Collection',
+    titleTemplate: '%s | Productos 5LC',
     media: {
       type: 'image',
       url: collection?.image?.url,
