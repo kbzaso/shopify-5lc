@@ -410,17 +410,16 @@ export function CartEmpty({
     <div ref={scrollRef} className={container[layout]} hidden={hidden}>
       <section className="grid gap-6">
         <Text format>
-          Looks like you haven&rsquo;t added anything yet, let&rsquo;s get you
-          started!
+        Parece que aún no has añadido nada aún.
         </Text>
         <div>
-          <Button onClick={onClose}>Continue shopping</Button>
+          <Button onClick={onClose}>Seguir comprando</Button>
         </div>
       </section>
       <section className="grid gap-8 pt-16">
         <FeaturedProducts
           count={4}
-          heading="Shop Best Sellers"
+          heading="Lo más vendido"
           layout={layout}
           onClose={onClose}
           sortKey="BEST_SELLING"

@@ -40,13 +40,13 @@ export async function loader({request, context: {storefront}}: LoaderArgs) {
 
   const seoCollection = {
     id: 'all-products',
-    title: 'All Products',
+    title: 'Nuestros productos',
     handle: 'products',
-    descriptionHtml: 'All the store products',
-    description: 'All the store products',
+    descriptionHtml: 'Todos nuestros productos',
+    description: 'Todos nuestros productos',
     seo: {
-      title: 'All Products',
-      description: 'All the store products',
+      title: 'Nuestros productos',
+      description: 'Todos nuestros productos',
     },
     metafields: [],
     products: data.products,
@@ -76,7 +76,7 @@ export default function AllProducts() {
 
   return (
     <>
-      <PageHeader heading="All Products" variant="allCollections" />
+      <PageHeader heading="Nuestros productos" variant="allCollections" />
       <Section>
         <Pagination connection={products}>
           {({

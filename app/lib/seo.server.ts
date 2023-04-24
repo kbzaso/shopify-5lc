@@ -30,7 +30,7 @@ function root({
 }): SeoConfig<Organization> {
   return {
     title: shop?.name,
-    titleTemplate: '%s | Hydrogen Demo Store',
+    titleTemplate: '%s | Tienda oficial 5LC',
     description: truncate(shop?.description ?? ''),
     handle: '@shopify',
     url,
@@ -63,8 +63,8 @@ function root({
 function home(): SeoConfig<WebPage> {
   return {
     title: 'Home',
-    titleTemplate: '%s | Hydrogen Demo Store',
-    description: 'The best place to buy snowboarding products',
+    titleTemplate: '%s | Tienda oficial 5LC',
+    description: 'Todos los productos oficiales de la lucha libre chilena',
     robots: {
       noIndex: false,
       noFollow: false,

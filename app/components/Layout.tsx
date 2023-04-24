@@ -16,7 +16,6 @@ import {
   IconMenu,
   IconCaret,
   Section,
-  CountrySelector,
   Cart,
   CartLoading,
   Link,
@@ -230,7 +229,7 @@ function MobileHeader({
           className="font-bold text-center leading-none"
           as={isHome ? 'h1' : 'h2'}
         >
-          {title}
+          <img src="/logo.svg" alt="Logo de la tienda" />
         </Heading>
       </Link>
 
@@ -268,9 +267,9 @@ function DesktopHeader({
     >
       <div className="flex gap-12">
         <Link className="font-bold" to="/" prefetch="intent">
-          {title}
+          <img src="/logo.svg" width={100} alt="Logo de la tienda" />
         </Link>
-        <nav className="flex gap-8">
+        <nav className="flex gap-8 items-center">
           {/* Top level menu items */}
           {(menu?.items || []).map((item) => (
             <Link
@@ -279,7 +278,7 @@ function DesktopHeader({
               target={item.target}
               prefetch="intent"
               className={({isActive}) =>
-                isActive ? 'pb-1 border-b -mb-px' : 'pb-1'
+                isActive ? 'pb-1 border-b -mb-px h-fit' : 'pb-1'
               }
             >
               {item.title}
@@ -415,16 +414,14 @@ function Footer({menu}: {menu?: EnhancedMenu}) {
       divider={isHome ? 'none' : 'top'}
       as="footer"
       role="contentinfo"
-      className={`grid min-h-[25rem] items-start grid-flow-row w-full gap-6 py-8 px-6 md:px-8 lg:px-12 md:gap-8 lg:gap-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-${itemsCount}
+      className={`grid items-start grid-flow-row w-full gap-6 py-8 px-6 md:px-8 lg:px-12 md:gap-8 lg:gap-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-${itemsCount}
         bg-primary dark:bg-contrast dark:text-primary text-contrast overflow-hidden`}
     >
-      <FooterMenu menu={menu} />
-      <CountrySelector />
+      {/* <FooterMenu menu={menu} /> */}
       <div
         className={`self-end pt-8 opacity-50 md:col-span-2 lg:col-span-${itemsCount}`}
       >
-        &copy; {new Date().getFullYear()} / Shopify, Inc. Hydrogen is an MIT
-        Licensed Open Source project.
+        &#174; {new Date().getFullYear()} / 5 Luchas Clandestino, todos los derechos reservados.
       </div>
     </Section>
   );

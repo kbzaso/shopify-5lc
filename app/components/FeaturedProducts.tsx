@@ -30,7 +30,7 @@ interface FeaturedProductsProps {
  */
 export function FeaturedProducts({
   count = 4,
-  heading = 'Shop Best Sellers',
+  heading = 'Lo más vendido',
   layout = 'drawer',
   onClose,
   query,
