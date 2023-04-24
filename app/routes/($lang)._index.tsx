@@ -78,6 +78,7 @@ export default function AllProducts() {
     <>
       <PageHeader heading="Nuestros productos" variant="allCollections" />
       <Section>
+        <h1>SIEMPRE BUENA ONDA</h1>
         <Pagination connection={products}>
           {({
             endCursor,
